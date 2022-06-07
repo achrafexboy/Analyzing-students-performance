@@ -1,0 +1,131 @@
+@charset 'utf-8';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing : border-box;
+}
+html{
+    min-height: 100%;
+}
+body{
+    font: 400 11px/1.4 sans-serif;
+    margin: 0;
+    background: #fff;
+    height:100%;
+    min-height:100%;
+    word-break: break-word;
+    -webkit-word-break: break-word;
+    background-image: url('back-st2.jpg'); /* You can change here the image location */
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.editing{
+    width:100%;
+    height:100vh;
+    position :absolute;
+    top : 0;
+    z-index : -1;
+    background : linear-gradient(#0F2027,#203A43,#2C5364);
+    opacity: 0.75;
+}
+.head-title{
+    font-size : 30px;
+    color : #E9E4F0;
+    font-family: Montserrat;
+    font-weight: bold;
+    padding : 20px 30px;
+    margin: 20px;
+    border: 8px solid #D3CCE3;
+    width: 500px;
+    text-transform: uppercase;
+    text-align : center;
+}
+.logo{
+    width : 350px;
+    position : absolute;
+    top: 25px;
+    right : 25px;
+}
+.content{
+    border: 3px solid #fff;
+    width : 40%;
+    margin : 100px auto;
+    padding : 10px;
+    border-radius: 0 10px 10px 10px;
+    background : linear-gradient(#D3CCE3,#E9E4F0);
+    min-height: 500px;
+    box-shadow: -1px 2px 5px 0px #fff;
+}
+.content .title{
+    text-align : center;
+    padding: 8px 0 10px 0;
+    border-bottom: 1px solid gray;
+    font-family: 'Sofia Pro';
+}
+.slt{
+    background-color : #2C5364;
+    border-radius: 0 8px 0 8px;
+    border-style: none;
+    font-family: 'Sofia Pro';
+    font-size : 14px;
+    padding-left: 5px;
+    color: #fff;
+    height : 30px;
+    width: 200px;
+    display: block;
+    margin  : 0 60%;
+    outline : none;
+    margin-bottom: 5px;
+    margin-top : -3px;
+}
+form{
+    margin : 35px auto;
+    max-width: 80%;
+}
+form label{
+    font-size : 18px;
+    font-family: 'Montserrat';
+    color : #000;
+
+}
+.btn{
+    margin : 20px 70px;
+    width : 130px;
+    height: 35px;
+    border-style: none;
+    border-radius: 20px;
+    color : #000;
+    font-family : Montserrat;
+    text-transform: uppercase;
+    font-size : 15px;
+    font-weight: 500;
+    background: -webkit-linear-gradient(#2C5364, #E9E4F0);
+    background: -moz-linear-gradient(#2C5364, #E9E4F0);
+    background: -o-linear-gradient(#2C5364, #E9E4F0);
+    background: linear-gradient(#2C5364, #E9E4F0);
+    
+    -webkit-transition: background 1s ease-out;
+    -moz-transition: background 1s ease-out;
+    -o-transition: background 1s ease-out;
+    transition: background 1s ease-out;
+    background-size:1px 200px;
+    cursor : pointer;
+}
+.btn:hover{
+    background-position: 200px;
+}
+.predict{
+    font-size : 20px;
+    font-family : 'Sofia Pro';
+    color : #2C5364;
+    margin-bottom: 10px;
+}
+.footer{
+    position: fixed;
+    bottom: 10px;
+    left : 10px;
+    font-size : 15px;
+    font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color : rgb(195, 195, 195);
+}

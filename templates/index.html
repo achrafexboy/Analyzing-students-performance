@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Model Deploiement</title>
+</head>
+<body>
+    <div class = "editing"></div>
+    <p class = "head-title">Model Deploiement<p>
+    <img class = "logo" src="{{url_for('static', filename = 'ensamLogo.png')}}" alt = "logo-IADS">
+    <div class="content">
+        <h1 class = 'title'>Student Performance Analysis</h1>
+            <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <label for="gender"> Choose Student's Gender : </label>
+            <select id='gender' name='gender' class = "slt">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+            
+            <label for="lunch"> Type of lunch student is having : </label>
+            <select id='lunch' name='lunch' class = "slt">
+                <option value="1">Standard</option>
+                <option value="0">Free/Reduced</option>
+            </select>
+
+            <label for="test-preparation-course"> Test Preparation Course : </label>
+            <select id='test-preparation-course' name='test-preparation-course' class = "slt">
+                <option value="1">Completed</option>
+                <option value="0">None</option>
+            </select>
+            
+            <label for="State-Student"> the state to which belongs: </label>
+            <select id='State-Student' name= 'State-Student' class = "slt">
+                <option value="0">California</option>
+                <option value="1">Florida</option>
+                <option value="2">Minnesota</option>
+                <option value="3">New York</option>
+                <option value="4">Texas</option>
+            </select>
+
+            <label for="parental-level-of-education"> Parental Level of Education: </label>
+            <select id='parental-level-of-education' name= 'parental-level-of-education' class = "slt">
+                <option value="0">Associate's Degree</option>
+                <option value="1">Bachelor's Degree</option>
+                <option value="2">High School</option>
+                <option value="3">Master's Degree</option>
+                <option value="4">Some College</option>
+                <option value="5">Some High School</option>
+            </select>
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <h1 class = "predict"><center><b> {{ prediction_text }} </b></center></h1>
+    </div>
+    <div class="footer">
+        <p>© Data science Foundation Project : 2022</p>
+        <p>Authors : MOURAD IZEM & ACHRAF FAYTOUT</p>
+    </div>
+</body>
+</html>
